@@ -8,6 +8,7 @@ void printUsage() {
     printf("  evict - Remove local copy while keeping it in the cloud\n");
 }
 
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         if (argc != 3) {

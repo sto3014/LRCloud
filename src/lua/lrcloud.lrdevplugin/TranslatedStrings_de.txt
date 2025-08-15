@@ -1,0 +1,17 @@
+"$$$/LRCloud/Metadata/CusLabel=LRCloud"
+"$$$/LRCloud/Menu/Library/RemoveDownload=Downloads entfernen"
+"$$$/LRCloud/Menu/Library/RemoveDownloadOfPhotos=Entferne Download für ^1 Fotos"
+"$$$/LRCloud/Menu/Library/KeepDownloadedPhotos=Starte Download für ^1 Fotos"
+"$$$/LRCloud/Menu/Library/KeepDownloaded=Fotos herunterladen"
+"$$$/LRCloud/Settings/PluginSettings=Plugin Einstellungen"
+"$$$/LRCloud/Settings/subFolderICloud=LRCloud Ordner"
+"$$$/LRCloud/Settings/subfoldersDownloadAlwaysAvailable=Ständig verfügbare Ordner"
+"$$$/LRCloud/Settings/displayWarnings=Warnungen anzeigen"
+"$$$/LRCloud/Msg/NotAllPhotosAreOnICloudDrive1=Ein Foto ist nicht im iCloud Ordner."
+"$$$/LRCloud/Msg/NotAllPhotosAreOnICloudDrive2=^1 Fotos sind nicht im iCloud Ordner."
+"$$$/LRCloud/Msg/NothingChanged1=Es ist unverändert."
+"$$$/LRCloud/Msg/NothingChanged2=Sie sind unverändert."
+"$$$/LRCloud/Msg/AllPhotosAlreadyDownloaded=Alle Fotos wurden bereits heruntergeladen."
+"$$$/LRCloud/Msg/AllDownloadsAlreadyRemoved=Alle Downloads wurden bereits entfernt."
+
+
