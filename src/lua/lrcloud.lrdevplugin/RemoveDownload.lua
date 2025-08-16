@@ -27,19 +27,25 @@ function TaskFunc(context)
         title = LOC("$$$/LRCloud/Menu/Library/RemoveDownloadOfPhotos=Remove download for ^1 photos", #photos),
         functionContext = context
     })
-        for idx, photo in ipairs(photos) do
-            local path = tostring(photo:getRawMetadata("path"))
-            logger.trace("file=" .. path)
-            local cmd = "'" .. prefs.cloudfileExeuteable .. "' '" .. path .. "' evict"
-            logger.trace("execute " .. cmd)
-            local stat = LrTasks.execute(cmd)
-            if stat ~= 0 then
-                logger.trace("Error: Download could not be removed")
+    logger.trace("Start removing download")
+    for idx, photo in ipairs(photos) do
+        local path = tostring(photo:getRawMetadata("path"))
+        logger.trace("file=" .. path)
+        local cmd = "'" .. prefs.cloudfileExeuteable .. "' '" .. path .. "' evict"
+        logger.trace("execute " .. cmd)
+        local result = LrTasks.execute(cmd)
+        logger.trace("result=" .. tostring(result))
+        if result ~= 0 then
+            if result == 65280 then
+                logger.trace("Photo is not located in a cloud directory.")
             else
-                logger.trace("Download removed")
+                logger.trace("Error: Download could not be removed")
             end
-            progress:setPortionComplete(idx, #photos)
+        else
+            logger.trace("Download removed")
         end
+        progress:setPortionComplete(idx, #photos)
+    end
     progress:done()
 end
 

@@ -34,7 +34,11 @@ function TaskFunc(context)
         local result = LrTasks.execute(cmd)
         logger.trace("result=" .. tostring(result))
         if result ~= 0 then
-            logger.trace("Download failed")
+            if result == 65280 then
+                logger.trace("Photo is not located in a cloud directory.")
+            else
+                logger.trace("Download failed")
+            end
         else
             logger.trace("Download started")
         end
