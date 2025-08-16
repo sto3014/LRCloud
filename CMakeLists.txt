@@ -5,10 +5,13 @@ set(CMAKE_C_STANDARD 99)
 set(CMAKE_OBJC_STANDARD 11)
 
 # Plugin package
-set(LR_PLUGIN_PACKAGE ${PROJECT_BINARY_DIR}/lrcloud.lrplugin)
+set(LR_PLUGIN_PACKAGE ${PROJECT_BINARY_DIR}/LRCloud.lrplugin)
 
 # create cloudfile executable in the plugin package
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${LR_PLUGIN_PACKAGE})
+
+# clean plugin package
+set_directory_properties(PROPERTIES ADDITIONAL_CLEAN_FILES  ${LR_PLUGIN_PACKAGE}  )
 
 # Define the executable
 add_executable(cloudfile src/objc/main.m)
@@ -25,7 +28,9 @@ set(LUA_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src/lua/lrcloud.lrdevplugin)
 file(GLOB_RECURSE
         LUA_FILES
         RELATIVE ${LUA_SOURCE_DIR}
-        ${LUA_SOURCE_DIR}/*.*)
+        ${LUA_SOURCE_DIR}/*.lua
+        ${LUA_SOURCE_DIR}/*.txt
+)
 
 FOREACH(LUA_FILE ${LUA_FILES})
     ADD_CUSTOM_TARGET(${LUA_FILE} ALL
@@ -34,4 +39,5 @@ FOREACH(LUA_FILE ${LUA_FILES})
             ${LR_PLUGIN_PACKAGE}/${LUA_FILE}
     )
 ENDFOREACH()
+
 

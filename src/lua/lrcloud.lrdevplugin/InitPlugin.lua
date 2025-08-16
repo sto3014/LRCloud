@@ -7,7 +7,6 @@
 
 local LrPrefs = import "LrPrefs"
 local LrPathUtils = import "LrPathUtils"
-local LrFileUtils = import "LrFileUtils"
 
 local logger = require("Logger")
 -------------------------------------------------------------------------------
@@ -27,17 +26,8 @@ end
 
 local function init()
     logger.trace("init start")
-
-    resetPrefs()
-
+    --resetPrefs()
     local prefs = LrPrefs.prefsForPlugin()
-    if prefs.displayWarnings == nil then
-        prefs.displayWarnings = true
-    end
-
-    if prefs.isLocalAvailableScript == nil then
-       prefs.isLocalAvailableScript = LrPathUtils.child(_PLUGIN.path, "isLocalAvailable.sh")
-    end
     if prefs.cloudfileExeuteable == nil then
        prefs.cloudfileExeuteable = LrPathUtils.child(_PLUGIN.path, "cloudfile")
     end

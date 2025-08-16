@@ -5,7 +5,6 @@ return {
     LrToolkitIdentifier = 'at.homebrew.lrcloud',
 
     LrPluginName = LOC "$$$/LRCloud/Metadata/CusLabel=LRCloud",
-    LrPluginInfoProvider = "InfoProvider.lua",
     LrLibraryMenuItems = {
         {
             title = LOC "$$$/LRCloud/Menu/Library/RemoveDownload=Remove Download",

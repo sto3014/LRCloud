@@ -2,7 +2,6 @@
 
 # Status In Work
 
-
 ## Building and Installing
 
 Ensure you have CMake installed before proceeding.
@@ -15,9 +14,14 @@ Ensure you have CMake installed before proceeding.
    ```
 2. Run the build script:
    ```sh
-   chmod +x build.sh
-   ./build.sh
+   chmod +x scripts/build.sh
+   ./scripts/build.sh
    ```
+3. Install plugin
+   ```sh
+   cp -r build/LRCloud.lrplugin ~/Library/Application\ Support/Adobe/Lightroom/Modules
+   ```
+4. Restart Lightroom
 
 
 ## Requirements
