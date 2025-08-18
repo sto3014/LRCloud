@@ -46,8 +46,8 @@ Ensure you have CMake installed before proceeding.
 
 1. Clone the repository:
    ```sh
-   git clone <repo-url>
-   cd <repo-name>
+   git clone https://github.com/sto3014/LRCloud.git
+   cd LRCloud
    ```
 2. Run the build script:
    ```sh
