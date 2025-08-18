@@ -2,7 +2,7 @@
 
 ---
 LR/Cloud is an Adobe Lightroom Classic plugin. It supports the handling of cloud-stored photos. It allows users to
-download multiple photos or remove their local copy.
+download photos or remove their local copy.
 
 ## Usage
 
@@ -19,20 +19,21 @@ Removes the local files of downloaded photos and only retains the link to the cl
 
 ### Download Photos
 
-Download photo files that are only stored in the cloud.
+Downloads photo files that are stored in the cloud.
 
 ## Use case
 
 ---
+**Assumption**   
+You store your photos on a cloud drive such as iCloud or OneDrive. Your photos are stored in folders organized
+by date. You decided to save the photos from the current year permanently on your local drive. But you removed all
+other photo-downloads to save storage space. These conditions can be easily met by configuring the folders via the
+Finder.
 
-You keep your photos on a cloud drive like iCloud or OneDrive. Your photos are stored in folders that are organized by
-date. You keep the photos of the current year permanently on your local drive. For all other years you removed the
-download the spare disk space.
+Now you find it helpful to have some Lightroom collections always available locally. This is very hard to do with
+Finder. With LR/Cloud you just select the photos of these collections and press __Download Photos__.
 
-Maybe you find it helpful to have some Lightroom collections always available locally. Just select the photos of these
-collections and press __Download Photos__.
-
-If later your diskspace is getting too small you can created smart-previews for some collections and remove the
+If later your diskspace is getting too small you can create smart-previews for some collections and remove the
 downloads by pressing __Remove Downloads__.
 
 ## Building and Installing
@@ -72,8 +73,10 @@ Ensure you have CMake installed before proceeding.
 
 ---
 
-* If you remove downloads for photos that are kept permanently the content is deleted but immediately re-download.
-* The download of photos doesn't keep them permanently. I.e., if your cloud service is configured to remove downloads
+* At the time LR/Cloud is not able to retrieve the keep-status of the files. So if you remove downloads for photos that
+  are kept permanently the content is deleted but immediately re-download.
+* At the time LR/Cloud is not able to change the keep-status of the files. LR/Cloud ony downloads photos, but doesn't
+  keep them permanently. I.e., if your cloud service is configured to remove downloads
   to save disk space, your previously downloaded photos may be removed in the future.
 
 ## Acknowledgements
